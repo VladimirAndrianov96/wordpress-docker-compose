@@ -1,0 +1,9 @@
+FROM nginx:stable
+
+# ... for future goals..
+#
+#
+
+STOPSIGNAL SIGTERM
+
+CMD ["nginx", "-g", "daemon off;"]
