@@ -2,7 +2,7 @@ version: '3.8'
 services:
 
   nginx:
-    container_name: nginx
+    container_name: wp_nginx
     restart: always
     hostname: nginx
     build:
@@ -21,7 +21,7 @@ services:
       - "443:443"
 
   mysql:
-    container_name: mysql
+    container_name: wp_mysql
     restart: always
     hostname: mysql
     build:
@@ -40,7 +40,7 @@ services:
       - "3306"
 
   redis:
-    container_name: redis
+    container_name: wp_redis
     restart: always
     hostname: redis
     build:
@@ -71,7 +71,7 @@ services:
       - "9000"
 
   phpmyadmin:
-    container_name: phpmyadmin
+    container_name: wp_phpmyadmin
     image: phpmyadmin/phpmyadmin:latest
     environment:
       - PMA_HOST=mysql
