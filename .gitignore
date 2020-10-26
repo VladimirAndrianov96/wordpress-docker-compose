@@ -1,6 +1,3 @@
 *.swp
-.env
-__pycache__
-*.pyc
 .env*
-mysql/*
+mysql/data/*
